@@ -46,7 +46,7 @@ function statelessauth(validator, options) {
             return;
         }
 
-        var claims = yield validator.validate(authheader);
+        var claims = validator.validate(authheader);
 
         if (!claims) {
             this.status = 401;
