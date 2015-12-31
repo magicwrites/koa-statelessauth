@@ -54,10 +54,7 @@ function statelessauth(validator, options) {
             return;
         }
 
-        this.user = {};
-        this.user.name = claims.name;
-        this.user.email = claims.email;
-        this.user.role = claims.role;
+        this.user = claims;
 
         yield next;
     }
